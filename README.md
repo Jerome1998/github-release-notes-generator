@@ -2,7 +2,7 @@
 
 A small little node module that converts release notes of github releases into a `json` format
 
-This action is based on the idea of @Kellojo, so basically all the credits belong to him.
+This action is based on the idea of [@Kellojo](https://github.com/Kellojo), so basically all the credits belong to him.
 I modified his code to get all the release notes and not only a specific version.
 
 It creates a json file with the following contents:
