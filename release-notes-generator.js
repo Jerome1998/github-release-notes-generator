@@ -12,8 +12,8 @@ module.exports.ReleaseNotesGenerator = class ReleaseNotesGenerator {
   }
 
   async createReleaseNotes (sFilePath) {
-    const oRelease = await this.getReleaseInfos(this.owner, this.repo);
-    this.writeInfosToFile(oRelease, sFilePath);
+    const oReleases = await this.getReleaseInfos(this.owner, this.repo);
+    this.writeInfosToFile(oReleases, sFilePath);
   }
 
   async getReleaseInfos (sOwner, sRepo) {
@@ -21,10 +21,10 @@ module.exports.ReleaseNotesGenerator = class ReleaseNotesGenerator {
     return data;
   }
 
-  writeInfosToFile (oRelease, sFilePath) {
-    console.log(`Found ${oRelease.length} release(s)`);
+  writeInfosToFile (oReleases, sFilePath) {
+    console.log(`Found ${oReleases.length} release(s)`);
 
-    const mappedReleases = data.map((d) => ({
+    const mappedReleases = oReleases.map((d) => ({
       name: d.name,
       url: d.html_url,
       version: d.tag_name,
