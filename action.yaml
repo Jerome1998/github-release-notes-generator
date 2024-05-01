@@ -1,4 +1,4 @@
-name: 'GitHub Release Notes JSON Generator'
+name: 'GitHub Release Notes Getter'
 description: 'A small little GitHub action that converts release notes of github releases into a json format'
 
 inputs:
